@@ -4,11 +4,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Title "Pi Battery Management"
+Date "2020-09-22"
+Rev "1"
+Comp "Bernhard Bablok"
+Comment1 "https://github.com/bablokb/pcb-pi-batman"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -19,18 +19,18 @@ U 1 1 5F54ACE6
 P 3850 3900
 F 0 "R1" V 3950 3900 50  0000 C CNN
 F 1 "10K" V 3850 3900 50  0000 C CNN
-F 2 "" V 3780 3900 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3780 3900 50  0001 C CNN
 F 3 "~" H 3850 3900 50  0001 C CNN
 	1    3850 3900
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:Conn_01x04_Male J2
+L Connector:Conn_01x05_Male J2
 U 1 1 5F54C963
 P 6400 4150
 F 0 "J2" H 6500 4400 50  0000 R CNN
 F 1 "Conn_DCDC" H 6600 4500 50  0000 R CNN
-F 2 "" H 6400 4150 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Horizontal" H 6400 4150 50  0001 C CNN
 F 3 "~" H 6400 4150 50  0001 C CNN
 	1    6400 4150
 	1    0    0    1   
@@ -47,23 +47,12 @@ F 3 "" H 6900 4150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0101
-U 1 1 5F551E8D
-P 3750 4400
-F 0 "#PWR0101" H 3750 4150 50  0001 C CNN
-F 1 "GND" V 3755 4272 50  0000 R CNN
-F 2 "" H 3750 4400 50  0001 C CNN
-F 3 "" H 3750 4400 50  0001 C CNN
-	1    3750 4400
-	0    1    1    0   
-$EndComp
-$Comp
 L temp:SN74HC74N U1
 U 1 1 5F65EDBD
 P 5050 3900
 F 0 "U1" H 5000 4603 60  0000 C CNN
 F 1 "74HCT74" H 5000 4497 60  0000 C CNN
-F 2 "digikey-footprints:DIP-14_W3mm" H 5250 4100 60  0001 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5250 4100 60  0001 L CNN
 F 3 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fsn74hc74" H 5250 4200 60  0001 L CNN
 F 4 "296-1602-5-ND" H 5250 4300 60  0001 L CNN "Digi-Key_PN"
 F 5 "SN74HC74N" H 5250 4400 60  0001 L CNN "MPN"
@@ -102,9 +91,9 @@ $Comp
 L Switch:SW_Push SW1
 U 1 1 5F54A71C
 P 3950 4400
-F 0 "SW1" H 3900 4200 50  0000 C CNN
-F 1 "SW_Push" H 3900 4300 50  0000 C CNN
-F 2 "" H 3950 4600 50  0001 C CNN
+F 0 "SW1" H 3700 4600 50  0000 C CNN
+F 1 "SW_Push" H 3650 4500 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H9.5mm" H 3950 4600 50  0001 C CNN
 F 3 "~" H 3950 4600 50  0001 C CNN
 	1    3950 4400
 	1    0    0    -1  
@@ -181,25 +170,55 @@ Connection ~ 6800 3550
 Wire Wire Line
 	6800 3550 6800 3400
 $Comp
-L Connector:Conn_01x03_Male J1
+L Connector:Conn_01x04_Male J1
 U 1 1 5F54A0B2
-P 2950 3850
-F 0 "J1" H 2800 3950 50  0000 C CNN
-F 1 "Conn_Pi" H 2750 3800 50  0000 C CNN
-F 2 "" H 2950 3850 50  0001 C CNN
-F 3 "~" H 2950 3850 50  0001 C CNN
-	1    2950 3850
-	-1   0    0    -1  
+P 2950 3950
+F 0 "J1" H 2800 4050 50  0000 C CNN
+F 1 "Conn_Pi" H 2750 3900 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 2950 3950 50  0001 C CNN
+F 3 "~" H 2950 3950 50  0001 C CNN
+	1    2950 3950
+	-1   0    0    1   
 $EndComp
 Text Label 2750 3850 2    50   ~ 0
 +5V
-Wire Wire Line
-	2750 3600 2750 3750
-Wire Wire Line
-	2750 3950 2750 5050
 Wire Wire Line
 	2750 5050 5150 5050
 Connection ~ 5150 5050
 Text Label 2750 3750 2    50   ~ 0
 GPIO26
+Text Label 6600 4350 0    50   ~ 0
+LBO
+Wire Wire Line
+	2750 5050 2750 4400
+Text Label 2750 3950 2    50   ~ 0
+LBO
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 5F6A3547
+P 3900 4950
+F 0 "J3" V 4050 5300 50  0000 R CNN
+F 1 "Conn_Ext_Btn" V 3950 5550 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 3900 4950 50  0001 C CNN
+F 3 "~" H 3900 4950 50  0001 C CNN
+	1    3900 4950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4000 4750 4150 4750
+Wire Wire Line
+	4150 4750 4150 4400
+Connection ~ 4150 4400
+Wire Wire Line
+	3900 4750 3750 4750
+Wire Wire Line
+	3750 4750 3750 4400
+Wire Wire Line
+	3750 4400 2750 4400
+Connection ~ 3750 4400
+Connection ~ 2750 4400
+Wire Wire Line
+	2750 4400 2750 4050
+Wire Wire Line
+	2750 3600 2750 3750
 $EndSCHEMATC
