@@ -33,17 +33,17 @@ F 1 "Conn_DCDC" H 6600 4500 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Horizontal" H 6400 4150 50  0001 C CNN
 F 3 "~" H 6400 4150 50  0001 C CNN
 	1    6400 4150
-	1    0    0    1   
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR02
 U 1 1 5F54DE0D
-P 6900 4150
-F 0 "#PWR02" H 6900 3900 50  0001 C CNN
-F 1 "GND" V 6905 4022 50  0000 R CNN
-F 2 "" H 6900 4150 50  0001 C CNN
-F 3 "" H 6900 4150 50  0001 C CNN
-	1    6900 4150
+P 6800 4350
+F 0 "#PWR02" H 6800 4100 50  0001 C CNN
+F 1 "GND" V 6805 4222 50  0000 R CNN
+F 2 "" H 6800 4350 50  0001 C CNN
+F 3 "" H 6800 4350 50  0001 C CNN
+	1    6800 4350
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -98,7 +98,7 @@ F 3 "~" H 3950 4600 50  0001 C CNN
 	1    3950 4400
 	1    0    0    -1  
 $EndComp
-Text Notes 2450 3550 0    50   ~ 0
+Text Notes 1850 3900 0    50   ~ 0
 gpio-poweroff\nLow->High
 $Comp
 L power:PWR_FLAG #FLG0101
@@ -116,12 +116,12 @@ Wire Wire Line
 $Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 5F66B4BA
-P 6900 4300
-F 0 "#FLG0102" H 6900 4375 50  0001 C CNN
-F 1 "PWR_FLAG" V 6900 4427 50  0000 L CNN
-F 2 "" H 6900 4300 50  0001 C CNN
-F 3 "~" H 6900 4300 50  0001 C CNN
-	1    6900 4300
+P 6800 4800
+F 0 "#FLG0102" H 6800 4875 50  0001 C CNN
+F 1 "PWR_FLAG" V 6800 4927 50  0000 L CNN
+F 2 "" H 6800 4800 50  0001 C CNN
+F 3 "~" H 6800 4800 50  0001 C CNN
+	1    6800 4800
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -135,30 +135,14 @@ Wire Wire Line
 Connection ~ 4150 3900
 Wire Wire Line
 	4150 3900 4650 3900
-Wire Wire Line
-	2750 3600 4650 3600
 Text Label 6600 4250 0    50   ~ 0
 Vin
-Text Label 6600 4050 0    50   ~ 0
-+5V
 Text Label 6600 3950 0    50   ~ 0
++5V
+Text Label 6600 4150 0    50   ~ 0
 En
 Wire Wire Line
-	6600 4150 6900 4150
-Wire Wire Line
-	6900 4150 6900 4300
-Wire Wire Line
-	6900 5050 5150 5050
-Connection ~ 6900 4150
-Connection ~ 6900 4300
-Wire Wire Line
-	6900 4300 6900 5050
-Wire Wire Line
 	5150 4500 5150 5050
-Wire Wire Line
-	6600 3800 6600 3950
-Wire Wire Line
-	5350 3800 6600 3800
 Wire Wire Line
 	6600 4250 6800 4250
 Wire Wire Line
@@ -180,14 +164,13 @@ F 3 "~" H 2950 3950 50  0001 C CNN
 	1    2950 3950
 	-1   0    0    1   
 $EndComp
-Text Label 2750 3850 2    50   ~ 0
+Text Label 2750 3750 2    50   ~ 0
 +5V
 Wire Wire Line
 	2750 5050 5150 5050
-Connection ~ 5150 5050
-Text Label 2750 3750 2    50   ~ 0
+Text Label 2750 3850 2    50   ~ 0
 GPIO26
-Text Label 6600 4350 0    50   ~ 0
+Text Label 6600 4050 0    50   ~ 0
 LBO
 Wire Wire Line
 	2750 5050 2750 4400
@@ -219,6 +202,27 @@ Connection ~ 3750 4400
 Connection ~ 2750 4400
 Wire Wire Line
 	2750 4400 2750 4050
+Connection ~ 6800 4350
 Wire Wire Line
-	2750 3600 2750 3750
+	6800 4350 6800 4800
+Wire Wire Line
+	6600 4350 6800 4350
+Wire Wire Line
+	5350 3800 6150 3800
+Wire Wire Line
+	6150 3800 6150 4150
+Wire Wire Line
+	6150 4150 6600 4150
+Wire Wire Line
+	6800 5050 5150 5050
+Wire Wire Line
+	6800 4800 6800 5050
+Connection ~ 6800 4800
+Connection ~ 5150 5050
+Wire Wire Line
+	4650 3600 3050 3600
+Wire Wire Line
+	3050 3600 3050 3850
+Wire Wire Line
+	3050 3850 2750 3850
 $EndSCHEMATC
