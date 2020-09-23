@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Pi Battery Management"
-Date "2020-09-22"
-Rev "1"
+Date "2020-09-23"
+Rev "2"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pcb-pi-batman"
 Comment2 ""
@@ -98,8 +98,8 @@ F 3 "~" H 3950 4600 50  0001 C CNN
 	1    3950 4400
 	1    0    0    -1  
 $EndComp
-Text Notes 1850 3900 0    50   ~ 0
-gpio-poweroff\nLow->High
+Text Notes 2000 3900 0    39   ~ 0
+off: Low->High\n(gpio-poweroff)\n
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5F669739
@@ -169,7 +169,7 @@ Text Label 2750 3750 2    50   ~ 0
 Wire Wire Line
 	2750 5050 5150 5050
 Text Label 2750 3850 2    50   ~ 0
-GPIO26
+GPIOxx
 Text Label 6600 4050 0    50   ~ 0
 LBO
 Wire Wire Line
@@ -177,12 +177,12 @@ Wire Wire Line
 Text Label 2750 3950 2    50   ~ 0
 LBO
 $Comp
-L Connector:Conn_01x02_Male J3
+L Connector:Conn_01x03_Male J3
 U 1 1 5F6A3547
 P 3900 4950
 F 0 "J3" V 4050 5300 50  0000 R CNN
-F 1 "Conn_Ext_Btn" V 3950 5550 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 3900 4950 50  0001 C CNN
+F 1 "Conn_Ext" V 3950 5550 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 3900 4950 50  0001 C CNN
 F 3 "~" H 3900 4950 50  0001 C CNN
 	1    3900 4950
 	0    -1   -1   0   
@@ -192,8 +192,6 @@ Wire Wire Line
 Wire Wire Line
 	4150 4750 4150 4400
 Connection ~ 4150 4400
-Wire Wire Line
-	3900 4750 3750 4750
 Wire Wire Line
 	3750 4750 3750 4400
 Wire Wire Line
@@ -225,4 +223,12 @@ Wire Wire Line
 	3050 3600 3050 3850
 Wire Wire Line
 	3050 3850 2750 3850
+Wire Wire Line
+	3750 4750 3800 4750
+Wire Wire Line
+	3900 4750 3900 4650
+Text Notes 3200 4500 0    39   ~ 0
+on: High -> Low
+Text Label 3900 4650 0    50   ~ 0
+Vin
 $EndSCHEMATC
