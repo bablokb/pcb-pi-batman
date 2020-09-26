@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 22)
+    (drawings 23)
     (tracks 50)
     (zones 0)
     (modules 10)
@@ -669,6 +669,9 @@
     )
   )
 
+  (gr_text JLCJLCJLCJLC (at 48.65 30.05 90) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
   (gr_text +Vin (at 31.635715 36.1) (layer F.SilkS) (tstamp 5F6AF468)
     (effects (font (size 1 1) (thickness 0.15)))
   )
@@ -720,7 +723,7 @@
   (gr_text GND (at 31.85 29.8) (layer F.SilkS) (tstamp 5F6A6AFB)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (gr_text SN74HCT74N (at 47 30 90) (layer F.SilkS)
+  (gr_text SN74HCT74N (at 45.75 30.3 90) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (gr_line (start 28 42) (end 28 16.5) (layer Edge.Cuts) (width 0.05) (tstamp 5F6AA23A))
