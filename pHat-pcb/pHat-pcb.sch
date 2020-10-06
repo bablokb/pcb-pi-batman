@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Pi Battery Management pHat"
-Date "2020-09-30"
+Date "2020-10-06"
 Rev "1"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pcb-pi-batman"
@@ -335,7 +335,7 @@ U 1 1 5F756DB6
 P 7300 2750
 F 0 "R1" V 7400 2750 50  0000 C CNN
 F 1 "10K" V 7300 2750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7230 2750 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 7230 2750 50  0001 C CNN
 F 3 "~" H 7300 2750 50  0001 C CNN
 	1    7300 2750
 	0    1    1    0   
@@ -357,7 +357,7 @@ U 1 1 5F756DD1
 P 8500 2750
 F 0 "U2" H 8450 3453 60  0000 C CNN
 F 1 "74HCT74" H 8450 3347 60  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8700 2950 60  0001 L CNN
+F 2 "user:SO-14_3.9x8.65mm_P1.27mm_HandSolder" H 8700 2950 60  0001 L CNN
 F 3 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fsn74hc74" H 8700 3050 60  0001 L CNN
 F 4 "296-1602-5-ND" H 8700 3150 60  0001 L CNN "Digi-Key_PN"
 F 5 "SN74HC74N" H 8700 3250 60  0001 L CNN "MPN"
@@ -435,7 +435,7 @@ U 1 1 5F756E15
 P 3150 4150
 F 0 "J8" H 3350 4550 50  0000 R CNN
 F 1 "Conn_Active_Low" H 3600 4400 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 3150 4150 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 3150 4150 50  0001 C CNN
 F 3 "~" H 3150 4150 50  0001 C CNN
 	1    3150 4150
 	1    0    0    -1  
@@ -444,7 +444,7 @@ Wire Wire Line
 	8100 2450 6500 2450
 Text Notes 750  5350 0    50   ~ 0
 on: High -> Low
-Text Label 3350 4150 0    50   ~ 0
+Text Label 3400 4050 0    50   ~ 0
 Vin
 $Comp
 L User:TPS61023_Breakout U1
@@ -463,7 +463,7 @@ U 1 1 5F75DC2A
 P 2100 4350
 F 0 "U3" H 2100 4950 50  0000 C CNN
 F 1 "DS3231M" H 2100 4850 50  0000 C CNN
-F 2 "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm" H 2100 3750 50  0001 C CNN
+F 2 "user:SOIC-16W_7.5x10.3mm_P1.27mm_HandSolder" H 2100 3750 50  0001 C CNN
 F 3 "http://datasheets.maximintegrated.com/en/ds/DS3231.pdf" H 2370 4400 50  0001 C CNN
 	1    2100 4350
 	1    0    0    -1  
@@ -547,9 +547,9 @@ F 3 "" H 1100 4450 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	1100 4150 1600 4150
+	1100 4150 1300 4150
 Wire Wire Line
-	1100 4250 1600 4250
+	1100 4250 1400 4250
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5F79E6F1
@@ -569,15 +569,15 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0105
 U 1 1 5F7A015C
-P 3350 4050
-F 0 "#PWR0105" H 3350 3800 50  0001 C CNN
-F 1 "GND" V 3355 3922 50  0000 R CNN
-F 2 "" H 3350 4050 50  0001 C CNN
-F 3 "" H 3350 4050 50  0001 C CNN
-	1    3350 4050
+P 3350 4150
+F 0 "#PWR0105" H 3350 3900 50  0001 C CNN
+F 1 "GND" V 3355 4022 50  0000 R CNN
+F 2 "" H 3350 4150 50  0001 C CNN
+F 3 "" H 3350 4150 50  0001 C CNN
+	1    3350 4150
 	0    -1   -1   0   
 $EndComp
-Text Label 3350 4250 0    50   ~ 0
+Text Label 3400 4300 0    50   ~ 0
 1~PRE
 $Comp
 L power:GND #PWR0106
@@ -683,50 +683,21 @@ Wire Wire Line
 Text Label 2600 4450 0    50   ~ 0
 1~PRE
 Wire Wire Line
-	6900 5250 7100 5250
-Wire Wire Line
 	6950 5400 7200 5400
 Wire Wire Line
 	7000 5700 7700 5700
-$Comp
-L power:PWR_FLAG #FLG0102
-U 1 1 5F799ED1
-P 7100 4850
-F 0 "#FLG0102" H 7100 4925 50  0001 C CNN
-F 1 "PWR_FLAG" V 7100 4977 50  0000 L CNN
-F 2 "" H 7100 4850 50  0001 C CNN
-F 3 "~" H 7100 4850 50  0001 C CNN
-	1    7100 4850
-	0    1    1    0   
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG0103
-U 1 1 5F79A6BB
-P 7200 5050
-F 0 "#FLG0103" H 7200 5125 50  0001 C CNN
-F 1 "PWR_FLAG" V 7200 5177 50  0000 L CNN
-F 2 "" H 7200 5050 50  0001 C CNN
-F 3 "~" H 7200 5050 50  0001 C CNN
-	1    7200 5050
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	7200 5050 7200 5400
 Connection ~ 7200 5400
 Wire Wire Line
 	7200 5400 7700 5400
-Wire Wire Line
-	7100 4850 7100 5250
-Connection ~ 7100 5250
-Wire Wire Line
-	7100 5250 7700 5250
 $Comp
 L User:74HC03 U4
 U 1 1 5F7922BA
 P 2250 6500
 F 0 "U4" H 2250 7370 50  0000 C CNN
 F 1 "74HC03" H 2250 7279 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2250 6500 50  0001 L BNN
+F 2 "user:SO-14_3.9x8.65mm_P1.27mm_HandSolder" H 2250 6500 50  0001 L BNN
 F 3 "NXP" H 2250 6500 50  0001 L BNN
 F 4 "1085231" H 2250 6500 50  0001 L BNN "Feld4"
 F 5 "74HC03DT" H 2250 6500 50  0001 L BNN "Feld5"
@@ -788,4 +759,44 @@ Text Notes 6250 3300 0    50   ~ 0
 on: High -> Low
 Text Notes 3200 6000 0    50   ~ 0
 on: High -> Low
+Text Label 7450 5200 0    50   ~ 0
+Vin
+Wire Wire Line
+	7450 5200 7450 5250
+Connection ~ 7450 5250
+Wire Wire Line
+	7450 5250 7700 5250
+Wire Wire Line
+	6900 5250 7450 5250
+Text Label 1400 3750 0    50   ~ 0
+GPIO2(SDA1)
+Text Label 1300 3600 0    50   ~ 0
+GPIO3(SCL1)
+Wire Wire Line
+	1300 3600 1300 4150
+Connection ~ 1300 4150
+Wire Wire Line
+	1300 4150 1600 4150
+Wire Wire Line
+	1400 3750 1400 4250
+Connection ~ 1400 4250
+Wire Wire Line
+	1400 4250 1600 4250
+$Comp
+L power:GND #PWR0109
+U 1 1 5F805DAA
+P 7200 5050
+F 0 "#PWR0109" H 7200 4800 50  0001 C CNN
+F 1 "GND" V 7205 4922 50  0000 R CNN
+F 2 "" H 7200 5050 50  0001 C CNN
+F 3 "" H 7200 5050 50  0001 C CNN
+	1    7200 5050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3350 4250 3350 4300
+Wire Wire Line
+	3350 4300 3400 4300
+Wire Wire Line
+	3350 4050 3400 4050
 $EndSCHEMATC
