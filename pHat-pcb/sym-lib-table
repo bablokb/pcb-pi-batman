@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name pHat-pcb-rescue)(type Legacy)(uri ${KIPRJMOD}/pHat-pcb-rescue.lib)(options "")(descr ""))
+)
