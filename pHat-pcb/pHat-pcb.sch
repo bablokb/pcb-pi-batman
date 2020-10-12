@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Pi Battery Management pHat"
-Date "2020-10-06"
+Date "2020-10-12"
 Rev "1"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pcb-pi-batman"
@@ -356,7 +356,7 @@ L User:SN74HC74N U2
 U 1 1 5F756DD1
 P 8500 2750
 F 0 "U2" H 8450 3453 60  0000 C CNN
-F 1 "74HCT74" H 8450 3347 60  0000 C CNN
+F 1 "74HC74" H 8450 3347 60  0000 C CNN
 F 2 "user:SO-14_3.9x8.65mm_P1.27mm_HandSolder" H 8700 2950 60  0001 L CNN
 F 3 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fsn74hc74" H 8700 3050 60  0001 L CNN
 F 4 "296-1602-5-ND" H 8700 3150 60  0001 L CNN "Digi-Key_PN"
