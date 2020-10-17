@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Pi Battery Management pHat"
-Date "2020-10-12"
-Rev "1"
+Date "2020-10-17"
+Rev "2"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pcb-pi-batman"
 Comment2 ""
@@ -460,23 +460,23 @@ $EndComp
 $Comp
 L Timer_RTC:DS3231M U3
 U 1 1 5F75DC2A
-P 2100 4350
-F 0 "U3" H 2100 4950 50  0000 C CNN
-F 1 "DS3231M" H 2100 4850 50  0000 C CNN
-F 2 "user:SOIC-16W_7.5x10.3mm_P1.27mm_HandSolder" H 2100 3750 50  0001 C CNN
-F 3 "http://datasheets.maximintegrated.com/en/ds/DS3231.pdf" H 2370 4400 50  0001 C CNN
-	1    2100 4350
+P 2150 4600
+F 0 "U3" H 2550 4200 50  0000 C CNN
+F 1 "DS3231M" H 2600 4100 50  0000 C CNN
+F 2 "user:SOIC-16W_7.5x10.3mm_P1.27mm_HandSolder" H 2150 4000 50  0001 C CNN
+F 3 "http://datasheets.maximintegrated.com/en/ds/DS3231.pdf" H 2420 4650 50  0001 C CNN
+	1    2150 4600
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_01x04_Male J5
 U 1 1 5F760C28
-P 900 4250
-F 0 "J5" H 1008 4531 50  0000 C CNN
-F 1 "Conn_I2C" H 1008 4440 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 900 4250 50  0001 C CNN
-F 3 "~" H 900 4250 50  0001 C CNN
-	1    900  4250
+P 950 4500
+F 0 "J5" H 1058 4781 50  0000 C CNN
+F 1 "Conn_I2C" H 1058 4690 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 950 4500 50  0001 C CNN
+F 3 "~" H 950 4500 50  0001 C CNN
+	1    950  4500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -515,41 +515,38 @@ Text Label 6500 2450 2    50   ~ 0
 GPIO26
 Text Label 6650 5850 0    50   ~ 0
 GPIO16
-NoConn ~ 2600 4150
+NoConn ~ 2650 4400
 $Comp
 L power:GND #PWR02
 U 1 1 5F783D0C
-P 2100 4750
-F 0 "#PWR02" H 2100 4500 50  0001 C CNN
-F 1 "GND" H 2300 4600 50  0000 R CNN
-F 2 "" H 2100 4750 50  0001 C CNN
-F 3 "" H 2100 4750 50  0001 C CNN
-	1    2100 4750
+P 2150 5000
+F 0 "#PWR02" H 2150 4750 50  0001 C CNN
+F 1 "GND" H 2350 4850 50  0000 R CNN
+F 2 "" H 2150 5000 50  0001 C CNN
+F 3 "" H 2150 5000 50  0001 C CNN
+	1    2150 5000
 	1    0    0    -1  
 $EndComp
-NoConn ~ 1600 4550
-NoConn ~ 2100 3950
-Text Label 1750 3950 2    50   ~ 0
+NoConn ~ 1650 4800
+Text Label 1650 4200 2    50   ~ 0
 Vin
-Wire Wire Line
-	1750 3950 2000 3950
-Text Label 1100 4350 0    50   ~ 0
+Text Label 1150 4600 0    50   ~ 0
 Vin
 $Comp
 L power:GND #PWR01
 U 1 1 5F7903D4
-P 1100 4450
-F 0 "#PWR01" H 1100 4200 50  0001 C CNN
-F 1 "GND" V 1105 4322 50  0000 R CNN
-F 2 "" H 1100 4450 50  0001 C CNN
-F 3 "" H 1100 4450 50  0001 C CNN
-	1    1100 4450
+P 1150 4700
+F 0 "#PWR01" H 1150 4450 50  0001 C CNN
+F 1 "GND" V 1155 4572 50  0000 R CNN
+F 2 "" H 1150 4700 50  0001 C CNN
+F 3 "" H 1150 4700 50  0001 C CNN
+	1    1150 4700
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	1100 4150 1300 4150
+	1150 4400 1350 4400
 Wire Wire Line
-	1100 4250 1400 4250
+	1150 4500 1250 4500
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5F79E6F1
@@ -680,7 +677,7 @@ F 3 "" H 1550 7200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7550 2750 8100 2750
-Text Label 2600 4450 0    50   ~ 0
+Text Label 2650 4700 0    50   ~ 0
 1~PRE
 Wire Wire Line
 	6950 5400 7200 5400
@@ -768,20 +765,20 @@ Wire Wire Line
 	7450 5250 7700 5250
 Wire Wire Line
 	6900 5250 7450 5250
-Text Label 1400 3750 0    50   ~ 0
+Text Label 1250 4000 2    50   ~ 0
 GPIO2(SDA1)
-Text Label 1300 3600 0    50   ~ 0
+Text Label 1350 3850 2    50   ~ 0
 GPIO3(SCL1)
 Wire Wire Line
-	1300 3600 1300 4150
-Connection ~ 1300 4150
+	1350 3850 1350 4400
+Connection ~ 1350 4400
 Wire Wire Line
-	1300 4150 1600 4150
+	1350 4400 1650 4400
 Wire Wire Line
-	1400 3750 1400 4250
-Connection ~ 1400 4250
+	1250 4000 1250 4500
+Connection ~ 1250 4500
 Wire Wire Line
-	1400 4250 1600 4250
+	1250 4500 1650 4500
 $Comp
 L power:GND #PWR0109
 U 1 1 5F805DAA
@@ -799,4 +796,46 @@ Wire Wire Line
 	3350 4300 3400 4300
 Wire Wire Line
 	3350 4050 3400 4050
+$Comp
+L power:GND #PWR0110
+U 1 1 5F8B2D56
+P 2350 4200
+F 0 "#PWR0110" H 2350 3950 50  0001 C CNN
+F 1 "GND" V 2350 4100 50  0000 R CNN
+F 2 "" H 2350 4200 50  0001 C CNN
+F 3 "" H 2350 4200 50  0001 C CNN
+	1    2350 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5F8B3C5A
+P 1950 3950
+F 0 "C1" H 1750 4000 50  0000 C CNN
+F 1 "100nF" H 1750 3900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 1988 3800 50  0001 C CNN
+F 3 "~" H 1950 3950 50  0001 C CNN
+	1    1950 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 4200 2350 4200
+$Comp
+L power:GND #PWR0111
+U 1 1 5F8F23AD
+P 1950 3800
+F 0 "#PWR0111" H 1950 3550 50  0001 C CNN
+F 1 "GND" V 1950 3700 50  0000 R CNN
+F 2 "" H 1950 3800 50  0001 C CNN
+F 3 "" H 1950 3800 50  0001 C CNN
+	1    1950 3800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1650 4200 1950 4200
+Wire Wire Line
+	1950 4100 1950 4200
+Connection ~ 1950 4200
+Wire Wire Line
+	1950 4200 2050 4200
 $EndSCHEMATC
