@@ -491,14 +491,14 @@ F 3 "~" H 900 6100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x04_Female J4
+L Connector:Conn_01x03_Female J4
 U 1 1 5F762AD7
-P 6450 5550
-F 0 "J4" H 6342 5125 50  0000 C CNN
-F 1 "Conn_Bat" H 6342 5216 50  0000 C CNN
-F 2 "TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 6450 5550 50  0001 C CNN
-F 3 "~" H 6450 5550 50  0001 C CNN
-	1    6450 5550
+P 6450 5450
+F 0 "J4" H 6342 5025 50  0000 C CNN
+F 1 "Conn_Bat" H 6342 5116 50  0000 C CNN
+F 2 "TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-3_1x03_P2.54mm_Horizontal" H 6450 5450 50  0001 C CNN
+F 3 "~" H 6450 5450 50  0001 C CNN
+	1    6450 5450
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -513,8 +513,6 @@ Text Label 7700 5550 2    50   ~ 0
 +5V
 Text Label 6500 2450 2    50   ~ 0
 GPIO26
-Text Label 6650 5850 0    50   ~ 0
-GPIO16
 NoConn ~ 2650 4400
 $Comp
 L power:GND #PWR02
@@ -644,8 +642,6 @@ Wire Wire Line
 Wire Wire Line
 	6900 5700 7000 5700
 Connection ~ 7000 5700
-Text Label 6650 5650 0    50   ~ 0
-LBO
 Wire Wire Line
 	9000 2400 8850 2400
 Wire Wire Line
@@ -746,8 +742,6 @@ Text Notes 5450 6000 0    50   ~ 0
 DC-DC converter with enable-pin
 Text Notes 2050 7650 0    50   ~ 0
 (74HC05 not available, so use NAND as inverter:\nnot x = x nand x)
-Wire Wire Line
-	6650 5850 6650 5650
 Wire Wire Line
 	6450 3150 7550 3150
 Wire Wire Line
