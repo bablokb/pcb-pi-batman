@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Pi Battery Management pHat"
-Date "2020-10-19"
-Rev "3"
+Date "2020-10-21"
+Rev "4"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pcb-pi-batman"
 Comment2 ""
@@ -469,15 +469,15 @@ F 3 "http://datasheets.maximintegrated.com/en/ds/DS3231.pdf" H 2420 4650 50  000
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x04_Male J5
+L Connector:Conn_01x05_Male J5
 U 1 1 5F760C28
 P 950 4500
-F 0 "J5" H 1058 4781 50  0000 C CNN
-F 1 "Conn_I2C" H 1058 4690 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 950 4500 50  0001 C CNN
+F 0 "J5" H 1100 4050 50  0000 C CNN
+F 1 "Conn_I2C" H 1100 4150 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 950 4500 50  0001 C CNN
 F 3 "~" H 950 4500 50  0001 C CNN
 	1    950  4500
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Connector:Conn_01x03_Male J3
@@ -541,10 +541,6 @@ F 3 "" H 1150 4700 50  0001 C CNN
 	1    1150 4700
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1150 4400 1350 4400
-Wire Wire Line
-	1150 4500 1250 4500
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5F79E6F1
@@ -751,20 +747,14 @@ Wire Wire Line
 	7250 3950 7500 3950
 Wire Wire Line
 	6700 3950 7250 3950
-Text Label 1250 4000 2    50   ~ 0
+Text Label 1400 4000 2    50   ~ 0
 GPIO2(SDA1)
-Text Label 1350 3850 2    50   ~ 0
+Text Label 1500 3850 2    50   ~ 0
 GPIO3(SCL1)
 Wire Wire Line
-	1350 3850 1350 4400
-Connection ~ 1350 4400
+	1500 3850 1500 4400
 Wire Wire Line
-	1350 4400 1650 4400
-Wire Wire Line
-	1250 4000 1250 4500
-Connection ~ 1250 4500
-Wire Wire Line
-	1250 4500 1650 4500
+	1400 4000 1400 4500
 $Comp
 L power:GND #PWR0109
 U 1 1 5F805DAA
@@ -928,4 +918,16 @@ Wire Notes Line
 	9450 6500 9450 5000
 Text Notes 5300 6400 0    50   ~ 0
 Vin monitor
+Text Label 1150 4300 0    50   ~ 0
+1~PRE
+Connection ~ 1400 4500
+Wire Wire Line
+	1400 4500 1650 4500
+Wire Wire Line
+	1150 4500 1400 4500
+Connection ~ 1500 4400
+Wire Wire Line
+	1500 4400 1650 4400
+Wire Wire Line
+	1150 4400 1500 4400
 $EndSCHEMATC
