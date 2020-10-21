@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Pi Battery Management pHat"
-Date "2020-10-17"
-Rev "2"
+Date "2020-10-19"
+Rev "3"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pcb-pi-batman"
 Comment2 ""
@@ -332,60 +332,60 @@ GPIO21(SPI1_SCK)
 $Comp
 L Device:R R1
 U 1 1 5F756DB6
-P 7300 2750
-F 0 "R1" V 7400 2750 50  0000 C CNN
-F 1 "10K" V 7300 2750 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 7230 2750 50  0001 C CNN
-F 3 "~" H 7300 2750 50  0001 C CNN
-	1    7300 2750
+P 7100 1450
+F 0 "R1" V 7200 1450 50  0000 C CNN
+F 1 "10K" V 7100 1450 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 7030 1450 50  0001 C CNN
+F 3 "~" H 7100 1450 50  0001 C CNN
+	1    7100 1450
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR03
 U 1 1 5F756DC2
-P 8650 3750
-F 0 "#PWR03" H 8650 3500 50  0001 C CNN
-F 1 "GND" V 8655 3622 50  0000 R CNN
-F 2 "" H 8650 3750 50  0001 C CNN
-F 3 "" H 8650 3750 50  0001 C CNN
-	1    8650 3750
+P 8450 2450
+F 0 "#PWR03" H 8450 2200 50  0001 C CNN
+F 1 "GND" V 8455 2322 50  0000 R CNN
+F 2 "" H 8450 2450 50  0001 C CNN
+F 3 "" H 8450 2450 50  0001 C CNN
+	1    8450 2450
 	0    -1   -1   0   
 $EndComp
 $Comp
 L User:SN74HC74N U2
 U 1 1 5F756DD1
-P 8500 2750
-F 0 "U2" H 8450 3453 60  0000 C CNN
-F 1 "74HC74" H 8450 3347 60  0000 C CNN
-F 2 "user:SO-14_3.9x8.65mm_P1.27mm_HandSolder" H 8700 2950 60  0001 L CNN
-F 3 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fsn74hc74" H 8700 3050 60  0001 L CNN
-F 4 "296-1602-5-ND" H 8700 3150 60  0001 L CNN "Digi-Key_PN"
-F 5 "SN74HC74N" H 8700 3250 60  0001 L CNN "MPN"
-F 6 "Integrated Circuits (ICs)" H 8700 3350 60  0001 L CNN "Category"
-F 7 "Logic - Flip Flops" H 8700 3450 60  0001 L CNN "Family"
-F 8 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fsn74hc74" H 8700 3550 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/texas-instruments/SN74HC74N/296-1602-5-ND/277248" H 8700 3650 60  0001 L CNN "DK_Detail_Page"
-F 10 "IC FF D-TYPE DUAL 1BIT 14DIP" H 8700 3750 60  0001 L CNN "Description"
-F 11 "Texas Instruments" H 8700 3850 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 8700 3950 60  0001 L CNN "Status"
-	1    8500 2750
+P 8300 1450
+F 0 "U2" H 8250 2153 60  0000 C CNN
+F 1 "74HC74" H 8250 2047 60  0000 C CNN
+F 2 "user:SO-14_3.9x8.65mm_P1.27mm_HandSolder" H 8500 1650 60  0001 L CNN
+F 3 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fsn74hc74" H 8500 1750 60  0001 L CNN
+F 4 "296-1602-5-ND" H 8500 1850 60  0001 L CNN "Digi-Key_PN"
+F 5 "SN74HC74N" H 8500 1950 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 8500 2050 60  0001 L CNN "Category"
+F 7 "Logic - Flip Flops" H 8500 2150 60  0001 L CNN "Family"
+F 8 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fsn74hc74" H 8500 2250 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/texas-instruments/SN74HC74N/296-1602-5-ND/277248" H 8500 2350 60  0001 L CNN "DK_Detail_Page"
+F 10 "IC FF D-TYPE DUAL 1BIT 14DIP" H 8500 2450 60  0001 L CNN "Description"
+F 11 "Texas Instruments" H 8500 2550 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 8500 2650 60  0001 L CNN "Status"
+	1    8300 1450
 	1    0    0    -1  
 $EndComp
-NoConn ~ 8800 2850
-NoConn ~ 8800 2950
-NoConn ~ 8100 2850
-NoConn ~ 8100 2950
-NoConn ~ 8100 3050
-NoConn ~ 8100 3150
+NoConn ~ 8600 1550
+NoConn ~ 8600 1650
+NoConn ~ 7900 1550
+NoConn ~ 7900 1650
+NoConn ~ 7900 1750
+NoConn ~ 7900 1850
 Wire Wire Line
-	7750 2250 7750 2550
+	7550 950  7550 1250
 Wire Wire Line
-	7750 2550 8100 2550
-Connection ~ 7750 2250
+	7550 1250 7900 1250
+Connection ~ 7550 950 
 Wire Wire Line
-	8800 2750 9050 2750
+	8600 1450 8850 1450
 Wire Wire Line
-	7850 2650 8100 2650
+	7650 1350 7900 1350
 $Comp
 L Switch:SW_Push SW1
 U 1 1 5F756DE5
@@ -397,37 +397,37 @@ F 3 "~" H 3300 5000 50  0001 C CNN
 	1    3300 4800
 	1    0    0    -1  
 $EndComp
-Text Notes 6250 2300 0    50   ~ 0
+Text Notes 6050 1000 0    50   ~ 0
 off: Low->High\n(gpio-poweroff)\n
 $Comp
 L power:PWR_FLAG #FLG01
 U 1 1 5F756DEC
-P 9000 2400
-F 0 "#FLG01" H 9000 2475 50  0001 C CNN
-F 1 "PWR_FLAG" V 9000 2527 50  0000 L CNN
-F 2 "" H 9000 2400 50  0001 C CNN
-F 3 "~" H 9000 2400 50  0001 C CNN
-	1    9000 2400
+P 8800 1100
+F 0 "#FLG01" H 8800 1175 50  0001 C CNN
+F 1 "PWR_FLAG" V 8800 1227 50  0000 L CNN
+F 2 "" H 8800 1100 50  0001 C CNN
+F 3 "~" H 8800 1100 50  0001 C CNN
+	1    8800 1100
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7750 2250 8600 2250
+	7550 950  8400 950 
 $Comp
 L power:PWR_FLAG #FLG02
 U 1 1 5F756DF3
-P 8600 3600
-F 0 "#FLG02" H 8600 3675 50  0001 C CNN
-F 1 "PWR_FLAG" V 8600 3727 50  0000 L CNN
-F 2 "" H 8600 3600 50  0001 C CNN
-F 3 "~" H 8600 3600 50  0001 C CNN
-	1    8600 3600
+P 8400 2300
+F 0 "#FLG02" H 8400 2375 50  0001 C CNN
+F 1 "PWR_FLAG" V 8400 2427 50  0000 L CNN
+F 2 "" H 8400 2300 50  0001 C CNN
+F 3 "~" H 8400 2300 50  0001 C CNN
+	1    8400 2300
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7150 2750 7150 2250
+	6950 1450 6950 950 
 Wire Wire Line
-	7150 2250 7750 2250
-Text Label 7000 5850 0    50   ~ 0
+	6950 950  7550 950 
+Text Label 6800 4550 0    50   ~ 0
 En
 $Comp
 L Connector:Conn_01x03_Male J8
@@ -441,7 +441,7 @@ F 3 "~" H 3150 4150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8100 2450 6500 2450
+	7900 1150 6300 1150
 Text Notes 750  5350 0    50   ~ 0
 on: High -> Low
 Text Label 3400 4050 0    50   ~ 0
@@ -449,12 +449,12 @@ Vin
 $Comp
 L User:TPS61023_Breakout U1
 U 1 1 5F75A1F7
-P 8350 5050
-F 0 "U1" V 8671 5128 50  0000 L CNN
-F 1 "TPS61023_Breakout" V 8762 5128 50  0000 L CNN
-F 2 "user:TPS61023_Breakout" H 8800 5400 50  0001 C CNN
-F 3 "" H 8350 5050 50  0001 C CNN
-	1    8350 5050
+P 8150 3750
+F 0 "U1" V 8471 3828 50  0000 L CNN
+F 1 "TPS61023_Breakout" V 8562 3828 50  0000 L CNN
+F 2 "user:TPS61023_Breakout" H 8600 4100 50  0001 C CNN
+F 3 "" H 8150 3750 50  0001 C CNN
+	1    8150 3750
 	0    1    1    0   
 $EndComp
 $Comp
@@ -493,25 +493,25 @@ $EndComp
 $Comp
 L Connector:Conn_01x03_Female J4
 U 1 1 5F762AD7
-P 6450 5450
-F 0 "J4" H 6342 5025 50  0000 C CNN
-F 1 "Conn_Bat" H 6342 5116 50  0000 C CNN
-F 2 "TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-3_1x03_P2.54mm_Horizontal" H 6450 5450 50  0001 C CNN
-F 3 "~" H 6450 5450 50  0001 C CNN
-	1    6450 5450
+P 6250 4150
+F 0 "J4" H 6142 3725 50  0000 C CNN
+F 1 "Conn_Bat" H 6142 3816 50  0000 C CNN
+F 2 "TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-3_1x03_P2.54mm_Horizontal" H 6250 4150 50  0001 C CNN
+F 3 "~" H 6250 4150 50  0001 C CNN
+	1    6250 4150
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	6650 5350 6900 5350
+	6450 4050 6700 4050
 Wire Wire Line
-	6900 5350 6900 5250
+	6700 4050 6700 3950
 Wire Wire Line
-	6950 5450 6950 5400
+	6750 4150 6750 4100
 Wire Wire Line
-	6650 5450 6950 5450
-Text Label 7700 5550 2    50   ~ 0
+	6450 4150 6750 4150
+Text Label 7500 4250 2    50   ~ 0
 +5V
-Text Label 6500 2450 2    50   ~ 0
+Text Label 6300 1150 2    50   ~ 0
 GPIO26
 NoConn ~ 2650 4400
 $Comp
@@ -587,11 +587,11 @@ F 3 "" H 3100 4800 50  0001 C CNN
 $EndComp
 Text Label 3500 4800 0    50   ~ 0
 1~PRE
-Text Label 6450 3150 2    50   ~ 0
+Text Label 6250 1850 2    50   ~ 0
 1~PRE
 Wire Wire Line
-	7450 2750 7550 2750
-Connection ~ 7550 2750
+	7250 1450 7350 1450
+Connection ~ 7350 1450
 $Comp
 L power:GND #PWR0107
 U 1 1 5F7A5C5F
@@ -614,49 +614,47 @@ Wire Notes Line
 Wire Notes Line
 	650  5400 650  3400
 Wire Wire Line
-	7000 5850 7000 5700
-Text Label 8800 2650 0    50   ~ 0
+	6800 4550 6800 4400
+Text Label 8600 1350 0    50   ~ 0
 En
 Wire Wire Line
-	9050 3400 7850 3400
+	8850 2100 7650 2100
 Wire Wire Line
-	7850 3400 7850 2650
+	7650 2100 7650 1350
 Wire Wire Line
-	9050 2750 9050 3400
+	8850 1450 8850 2100
 Wire Wire Line
-	8600 3350 8600 3600
+	8400 2050 8400 2300
 Wire Wire Line
-	8600 3750 8650 3750
-Connection ~ 8600 3600
+	8400 2450 8450 2450
+Connection ~ 8400 2300
 Wire Wire Line
-	8600 3600 8600 3750
-Text Label 9000 2250 0    50   ~ 0
+	8400 2300 8400 2450
+Text Label 8800 950  0    50   ~ 0
 Vin
 Wire Wire Line
-	9000 2250 8850 2250
-Connection ~ 8600 2250
+	8800 950  8650 950 
+Connection ~ 8400 950 
 Wire Wire Line
-	6650 5550 6900 5550
+	6450 4250 6700 4250
 Wire Wire Line
-	6900 5550 6900 5700
+	6700 4250 6700 4400
 Wire Wire Line
-	6900 5700 7000 5700
-Connection ~ 7000 5700
+	6700 4400 6800 4400
+Connection ~ 6800 4400
 Wire Wire Line
-	9000 2400 8850 2400
+	8800 1100 8650 1100
 Wire Wire Line
-	8850 2400 8850 2250
-Connection ~ 8850 2250
+	8650 1100 8650 950 
+Connection ~ 8650 950 
 Wire Wire Line
-	8850 2250 8600 2250
+	8650 950  8400 950 
 Wire Wire Line
-	1100 6200 1350 6200
+	1100 6200 1400 6200
 Text Label 2950 6000 0    50   ~ 0
 1~PRE
 NoConn ~ 1550 6500
-NoConn ~ 1550 6700
 NoConn ~ 1550 6800
-NoConn ~ 1550 6900
 NoConn ~ 1550 7000
 Text Label 1550 6000 2    50   ~ 0
 Vin
@@ -672,18 +670,18 @@ F 3 "" H 1550 7200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7550 2750 8100 2750
+	7350 1450 7900 1450
 Text Label 2650 4700 0    50   ~ 0
 1~PRE
 Wire Wire Line
-	6950 5400 7200 5400
+	6750 4100 7000 4100
 Wire Wire Line
-	7000 5700 7700 5700
+	6800 4400 7500 4400
 Wire Wire Line
-	7200 5050 7200 5400
-Connection ~ 7200 5400
+	7000 3750 7000 4100
+Connection ~ 7000 4100
 Wire Wire Line
-	7200 5400 7700 5400
+	7000 4100 7500 4100
 $Comp
 L User:74HC03 U4
 U 1 1 5F7922BA
@@ -699,16 +697,10 @@ F 7 "99K0569" H 2250 6500 50  0001 L BNN "Feld7"
 	1    2250 6500
 	1    0    0    -1  
 $EndComp
+Connection ~ 1400 6200
 Wire Wire Line
-	1350 6200 1350 6300
-Wire Wire Line
-	1350 6300 1550 6300
-Connection ~ 1350 6200
-Wire Wire Line
-	1350 6200 1550 6200
-NoConn ~ 1550 6400
+	1400 6200 1550 6200
 NoConn ~ 2950 6100
-NoConn ~ 2950 6200
 NoConn ~ 2950 6300
 Wire Notes Line
 	4000 5550 650  5550
@@ -718,47 +710,47 @@ Wire Notes Line
 	650  7700 4000 7700
 Wire Notes Line
 	4000 7700 4000 5550
-Text Notes 700  6450 0    50   ~ 0
+Text Notes 700  6350 0    50   ~ 0
 on: Low -> High
 Wire Notes Line
-	9650 1950 5350 1950
+	9450 650  5150 650 
 Wire Notes Line
-	5350 1950 5350 4350
+	5150 650  5150 3050
 Wire Notes Line
-	5350 4350 9650 4350
+	5150 3050 9450 3050
 Wire Notes Line
-	9650 4350 9650 1950
+	9450 3050 9450 650 
 Wire Notes Line
-	5350 4550 9650 4550
+	5150 3250 9450 3250
 Wire Notes Line
-	9650 4550 9650 6100
+	9450 3250 9450 4800
 Wire Notes Line
-	9650 6100 5350 6100
+	9450 4800 5150 4800
 Wire Notes Line
-	5350 6100 5350 4550
-Text Notes 5450 4300 0    50   ~ 0
+	5150 4800 5150 3250
+Text Notes 5250 3000 0    50   ~ 0
 on/off logic via flip-flop
-Text Notes 5450 6000 0    50   ~ 0
+Text Notes 5250 4700 0    50   ~ 0
 DC-DC converter with enable-pin
 Text Notes 2050 7650 0    50   ~ 0
 (74HC05 not available, so use NAND as inverter:\nnot x = x nand x)
 Wire Wire Line
-	6450 3150 7550 3150
+	6250 1850 7350 1850
 Wire Wire Line
-	7550 2750 7550 3150
-Text Notes 6250 3300 0    50   ~ 0
+	7350 1450 7350 1850
+Text Notes 6050 2000 0    50   ~ 0
 on: High -> Low
 Text Notes 3200 6000 0    50   ~ 0
 on: High -> Low
-Text Label 7450 5200 0    50   ~ 0
+Text Label 7250 3900 0    50   ~ 0
 Vin
 Wire Wire Line
-	7450 5200 7450 5250
-Connection ~ 7450 5250
+	7250 3900 7250 3950
+Connection ~ 7250 3950
 Wire Wire Line
-	7450 5250 7700 5250
+	7250 3950 7500 3950
 Wire Wire Line
-	6900 5250 7450 5250
+	6700 3950 7250 3950
 Text Label 1250 4000 2    50   ~ 0
 GPIO2(SDA1)
 Text Label 1350 3850 2    50   ~ 0
@@ -776,12 +768,12 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0109
 U 1 1 5F805DAA
-P 7200 5050
-F 0 "#PWR0109" H 7200 4800 50  0001 C CNN
-F 1 "GND" V 7205 4922 50  0000 R CNN
-F 2 "" H 7200 5050 50  0001 C CNN
-F 3 "" H 7200 5050 50  0001 C CNN
-	1    7200 5050
+P 7000 3750
+F 0 "#PWR0109" H 7000 3500 50  0001 C CNN
+F 1 "GND" V 7005 3622 50  0000 R CNN
+F 2 "" H 7000 3750 50  0001 C CNN
+F 3 "" H 7000 3750 50  0001 C CNN
+	1    7000 3750
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
@@ -832,4 +824,108 @@ Wire Wire Line
 Connection ~ 1950 4200
 Wire Wire Line
 	1950 4200 2050 4200
+$Comp
+L User:KA75330 U5
+U 1 1 5F8B41F9
+P 6450 5400
+F 0 "U5" H 6450 5642 50  0000 C CNN
+F 1 "KA75330" H 6450 5551 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 6450 5625 50  0001 C CIN
+F 3 "" H 6450 5350 50  0001 C CNN
+	1    6450 5400
+	1    0    0    -1  
+$EndComp
+Text Label 6150 5400 2    50   ~ 0
+Vin
+$Comp
+L power:GND #PWR04
+U 1 1 5F8C6F0E
+P 7300 6000
+F 0 "#PWR04" H 7300 5750 50  0001 C CNN
+F 1 "GND" V 7305 5872 50  0000 R CNN
+F 2 "" H 7300 6000 50  0001 C CNN
+F 3 "" H 7300 6000 50  0001 C CNN
+	1    7300 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F8C7AC2
+P 8000 5550
+F 0 "R2" H 7850 5450 50  0000 C CNN
+F 1 "1kΩ" H 7850 5550 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 7930 5550 50  0001 C CNN
+F 3 "~" H 8000 5550 50  0001 C CNN
+	1    8000 5550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5F8C8ABC
+P 8000 5850
+F 0 "D1" V 8050 5650 50  0000 C CNN
+F 1 "LED" V 7950 5650 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 8000 5850 50  0001 C CNN
+F 3 "~" H 8000 5850 50  0001 C CNN
+	1    8000 5850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6450 5700 6450 6000
+Text Label 6850 5400 0    50   ~ 0
+BatLow
+Wire Wire Line
+	6850 5400 6750 5400
+Wire Wire Line
+	1400 6700 1550 6700
+Wire Wire Line
+	1400 6200 1400 6700
+NoConn ~ 1550 6300
+Wire Wire Line
+	950  6750 1450 6750
+Wire Wire Line
+	1450 6750 1450 6400
+Wire Wire Line
+	1450 6400 1550 6400
+Wire Wire Line
+	1450 6750 1450 6900
+Wire Wire Line
+	1450 6900 1550 6900
+Connection ~ 1450 6750
+Text Notes 3450 6250 0    50   ~ 0
+High on\nlow-battery
+Text Label 3150 6200 0    50   ~ 0
+~BatLow
+Text Label 950  6750 2    50   ~ 0
+BatLow
+Wire Wire Line
+	2950 6200 3150 6200
+Text Label 7600 5400 2    50   ~ 0
+~BatLow
+Wire Wire Line
+	7600 5400 7750 5400
+Text Label 8000 5200 0    50   ~ 0
+GPIO16
+Wire Wire Line
+	7750 5400 7750 5200
+Wire Wire Line
+	7750 5200 8000 5200
+Connection ~ 7750 5400
+Wire Wire Line
+	7750 5400 8000 5400
+Connection ~ 7300 6000
+Wire Wire Line
+	7300 6000 8000 6000
+Wire Wire Line
+	6450 6000 7300 6000
+Wire Notes Line
+	9450 5000 5150 5000
+Wire Notes Line
+	5150 5000 5150 6500
+Wire Notes Line
+	5150 6500 9450 6500
+Wire Notes Line
+	9450 6500 9450 5000
+Text Notes 5300 6400 0    50   ~ 0
+Vin monitor
 $EndSCHEMATC
