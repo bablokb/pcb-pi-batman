@@ -851,32 +851,23 @@ $EndComp
 Wire Wire Line
 	6450 5700 6450 6000
 Text Label 6850 5400 0    50   ~ 0
-BatLow
+BatOk
 Wire Wire Line
 	6850 5400 6750 5400
 Wire Wire Line
 	1450 6500 1950 6500
-Text Notes 3050 6650 0    50   ~ 0
+Text Notes 3050 6550 0    50   ~ 0
 High on\nlow-battery
-Text Label 2750 6600 0    50   ~ 0
-~BatLow
+Text Label 2750 6500 0    50   ~ 0
+~BatOk
 Text Label 1450 6500 2    50   ~ 0
-BatLow
+BatOk
 Wire Wire Line
-	2550 6600 2750 6600
-Text Label 7600 5400 2    50   ~ 0
-~BatLow
-Wire Wire Line
-	7600 5400 7750 5400
+	2550 6500 2750 6500
+Text Label 7500 5400 2    50   ~ 0
+~BatOk
 Text Label 8000 5200 0    50   ~ 0
 GPIO16
-Wire Wire Line
-	7750 5400 7750 5200
-Wire Wire Line
-	7750 5200 8000 5200
-Connection ~ 7750 5400
-Wire Wire Line
-	7750 5400 8000 5400
 Connection ~ 7300 6000
 Wire Wire Line
 	7300 6000 8000 6000
@@ -908,7 +899,6 @@ Wire Wire Line
 	1500 6200 1950 6200
 NoConn ~ 2550 6300
 NoConn ~ 2550 6400
-NoConn ~ 2550 6500
 NoConn ~ 2550 6700
 Wire Wire Line
 	1950 6300 1850 6300
@@ -936,4 +926,26 @@ Wire Wire Line
 Connection ~ 1850 6600
 Wire Wire Line
 	1850 6600 1850 6700
+$Comp
+L Jumper:SolderJumper_2_Bridged JP1
+U 1 1 5F9ABDE0
+P 8550 5400
+F 0 "JP1" H 8550 5550 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 8850 5250 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 8550 5400 50  0001 C CNN
+F 3 "~" H 8550 5400 50  0001 C CNN
+	1    8550 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 5400 8400 5400
+Text Label 8700 5400 0    50   ~ 0
+GPIO6
+Wire Wire Line
+	7500 5400 7700 5400
+Wire Wire Line
+	7700 5400 7700 5200
+Wire Wire Line
+	7700 5200 8000 5200
+NoConn ~ 2550 6600
 $EndSCHEMATC
