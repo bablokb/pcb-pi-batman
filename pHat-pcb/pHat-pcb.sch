@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Pi Battery Management pHat"
-Date "2020-10-21"
-Rev "4"
+Date "2020-10-23"
+Rev "5"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pcb-pi-batman"
 Comment2 ""
@@ -482,12 +482,12 @@ $EndComp
 $Comp
 L Connector:Conn_01x03_Male J3
 U 1 1 5F761E95
-P 900 6100
-F 0 "J3" H 1000 6450 50  0000 C CNN
-F 1 "Conn_Active_High" H 1000 6350 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 900 6100 50  0001 C CNN
-F 3 "~" H 900 6100 50  0001 C CNN
-	1    900  6100
+P 1300 6100
+F 0 "J3" H 1400 6450 50  0000 C CNN
+F 1 "Conn_Active_High" H 1400 6350 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1300 6100 50  0001 C CNN
+F 3 "~" H 1300 6100 50  0001 C CNN
+	1    1300 6100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -591,15 +591,15 @@ Connection ~ 7350 1450
 $Comp
 L power:GND #PWR0107
 U 1 1 5F7A5C5F
-P 1100 6100
-F 0 "#PWR0107" H 1100 5850 50  0001 C CNN
-F 1 "GND" V 1105 5972 50  0000 R CNN
-F 2 "" H 1100 6100 50  0001 C CNN
-F 3 "" H 1100 6100 50  0001 C CNN
-	1    1100 6100
+P 1500 6100
+F 0 "#PWR0107" H 1500 5850 50  0001 C CNN
+F 1 "GND" V 1505 5972 50  0000 R CNN
+F 2 "" H 1500 6100 50  0001 C CNN
+F 3 "" H 1500 6100 50  0001 C CNN
+	1    1500 6100
 	0    -1   -1   0   
 $EndComp
-Text Label 1100 6000 0    50   ~ 0
+Text Label 1500 6000 0    50   ~ 0
 Vin
 Wire Notes Line
 	650  3400 4000 3400
@@ -645,25 +645,20 @@ Wire Wire Line
 Connection ~ 8650 950 
 Wire Wire Line
 	8650 950  8400 950 
-Wire Wire Line
-	1100 6200 1400 6200
-Text Label 2950 6000 0    50   ~ 0
+Text Label 2550 6200 0    50   ~ 0
 1~PRE
-NoConn ~ 1550 6500
-NoConn ~ 1550 6800
-NoConn ~ 1550 7000
-Text Label 1550 6000 2    50   ~ 0
+Text Label 2250 5900 2    50   ~ 0
 Vin
 $Comp
 L power:GND #PWR0108
 U 1 1 5F7888FE
-P 1550 7200
-F 0 "#PWR0108" H 1550 6950 50  0001 C CNN
-F 1 "GND" V 1555 7072 50  0000 R CNN
-F 2 "" H 1550 7200 50  0001 C CNN
-F 3 "" H 1550 7200 50  0001 C CNN
-	1    1550 7200
-	0    1    1    0   
+P 2250 7150
+F 0 "#PWR0108" H 2250 6900 50  0001 C CNN
+F 1 "GND" V 2255 7022 50  0000 R CNN
+F 2 "" H 2250 7150 50  0001 C CNN
+F 3 "" H 2250 7150 50  0001 C CNN
+	1    2250 7150
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	7350 1450 7900 1450
@@ -679,11 +674,11 @@ Connection ~ 7000 4100
 Wire Wire Line
 	7000 4100 7500 4100
 $Comp
-L User:74HC03 U4
+L User:SN74HC05N U4
 U 1 1 5F7922BA
 P 2250 6500
 F 0 "U4" H 2250 7370 50  0000 C CNN
-F 1 "74HC03" H 2250 7279 50  0000 C CNN
+F 1 "SN74HC05N" H 2250 7279 50  0000 C CNN
 F 2 "user:SO-14_3.9x8.65mm_P1.27mm_HandSolder" H 2250 6500 50  0001 L BNN
 F 3 "NXP" H 2250 6500 50  0001 L BNN
 F 4 "1085231" H 2250 6500 50  0001 L BNN "Feld4"
@@ -693,11 +688,6 @@ F 7 "99K0569" H 2250 6500 50  0001 L BNN "Feld7"
 	1    2250 6500
 	1    0    0    -1  
 $EndComp
-Connection ~ 1400 6200
-Wire Wire Line
-	1400 6200 1550 6200
-NoConn ~ 2950 6100
-NoConn ~ 2950 6300
 Wire Notes Line
 	4000 5550 650  5550
 Wire Notes Line
@@ -706,7 +696,7 @@ Wire Notes Line
 	650  7700 4000 7700
 Wire Notes Line
 	4000 7700 4000 5550
-Text Notes 700  6350 0    50   ~ 0
+Text Notes 1100 6350 0    50   ~ 0
 on: Low -> High
 Wire Notes Line
 	9450 650  5150 650 
@@ -728,15 +718,13 @@ Text Notes 5250 3000 0    50   ~ 0
 on/off logic via flip-flop
 Text Notes 5250 4700 0    50   ~ 0
 DC-DC converter with enable-pin
-Text Notes 2050 7650 0    50   ~ 0
-(74HC05 not available, so use NAND as inverter:\nnot x = x nand x)
 Wire Wire Line
 	6250 1850 7350 1850
 Wire Wire Line
 	7350 1450 7350 1850
 Text Notes 6050 2000 0    50   ~ 0
 on: High -> Low
-Text Notes 3200 6000 0    50   ~ 0
+Text Notes 2800 6200 0    50   ~ 0
 on: High -> Low
 Text Label 7250 3900 0    50   ~ 0
 Vin
@@ -867,29 +855,15 @@ BatLow
 Wire Wire Line
 	6850 5400 6750 5400
 Wire Wire Line
-	1400 6700 1550 6700
-Wire Wire Line
-	1400 6200 1400 6700
-NoConn ~ 1550 6300
-Wire Wire Line
-	950  6750 1450 6750
-Wire Wire Line
-	1450 6750 1450 6400
-Wire Wire Line
-	1450 6400 1550 6400
-Wire Wire Line
-	1450 6750 1450 6900
-Wire Wire Line
-	1450 6900 1550 6900
-Connection ~ 1450 6750
-Text Notes 3450 6250 0    50   ~ 0
+	1450 6500 1950 6500
+Text Notes 3050 6650 0    50   ~ 0
 High on\nlow-battery
-Text Label 3150 6200 0    50   ~ 0
+Text Label 2750 6600 0    50   ~ 0
 ~BatLow
-Text Label 950  6750 2    50   ~ 0
+Text Label 1450 6500 2    50   ~ 0
 BatLow
 Wire Wire Line
-	2950 6200 3150 6200
+	2550 6600 2750 6600
 Text Label 7600 5400 2    50   ~ 0
 ~BatLow
 Wire Wire Line
@@ -930,4 +904,36 @@ Wire Wire Line
 	1500 4400 1650 4400
 Wire Wire Line
 	1150 4400 1500 4400
+Wire Wire Line
+	1500 6200 1950 6200
+NoConn ~ 2550 6300
+NoConn ~ 2550 6400
+NoConn ~ 2550 6500
+NoConn ~ 2550 6700
+Wire Wire Line
+	1950 6300 1850 6300
+Wire Wire Line
+	1850 6300 1850 6400
+Wire Wire Line
+	1850 7050 2250 7050
+Wire Wire Line
+	2250 7050 2250 7000
+Wire Wire Line
+	2250 7050 2250 7150
+Connection ~ 2250 7050
+Wire Wire Line
+	1950 6400 1850 6400
+Connection ~ 1850 6400
+Wire Wire Line
+	1950 6700 1850 6700
+Connection ~ 1850 6700
+Wire Wire Line
+	1850 6700 1850 7050
+Wire Wire Line
+	1850 6400 1850 6600
+Wire Wire Line
+	1950 6600 1850 6600
+Connection ~ 1850 6600
+Wire Wire Line
+	1850 6600 1850 6700
 $EndSCHEMATC
