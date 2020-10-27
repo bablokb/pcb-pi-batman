@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Pi Battery Management pHat"
-Date "2020-10-23"
-Rev "5"
+Date "2020-10-24"
+Rev "6"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pcb-pi-batman"
 Comment2 ""
@@ -813,47 +813,30 @@ F 3 "" H 6450 5350 50  0001 C CNN
 	1    6450 5400
 	1    0    0    -1  
 $EndComp
-Text Label 6150 5400 2    50   ~ 0
+Text Label 5950 5400 2    50   ~ 0
 Vin
-$Comp
-L power:GND #PWR04
-U 1 1 5F8C6F0E
-P 7300 6000
-F 0 "#PWR04" H 7300 5750 50  0001 C CNN
-F 1 "GND" V 7305 5872 50  0000 R CNN
-F 2 "" H 7300 6000 50  0001 C CNN
-F 3 "" H 7300 6000 50  0001 C CNN
-	1    7300 6000
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R R2
 U 1 1 5F8C7AC2
-P 8000 5550
-F 0 "R2" H 7850 5450 50  0000 C CNN
-F 1 "1kΩ" H 7850 5550 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 7930 5550 50  0001 C CNN
-F 3 "~" H 8000 5550 50  0001 C CNN
-	1    8000 5550
-	-1   0    0    1   
+P 6350 6200
+F 0 "R2" H 6200 6100 50  0000 C CNN
+F 1 "1kΩ" H 6200 6200 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 6280 6200 50  0001 C CNN
+F 3 "~" H 6350 6200 50  0001 C CNN
+	1    6350 6200
+	0    1    1    0   
 $EndComp
 $Comp
 L Device:LED D1
 U 1 1 5F8C8ABC
-P 8000 5850
-F 0 "D1" V 8050 5650 50  0000 C CNN
-F 1 "LED" V 7950 5650 50  0000 C CNN
-F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 8000 5850 50  0001 C CNN
-F 3 "~" H 8000 5850 50  0001 C CNN
-	1    8000 5850
-	0    -1   -1   0   
+P 6650 6200
+F 0 "D1" V 6700 6000 50  0000 C CNN
+F 1 "LED" V 6600 6000 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6650 6200 50  0001 C CNN
+F 3 "~" H 6650 6200 50  0001 C CNN
+	1    6650 6200
+	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	6450 5700 6450 6000
-Text Label 6850 5400 0    50   ~ 0
-BatOk
-Wire Wire Line
-	6850 5400 6750 5400
 Wire Wire Line
 	1450 6500 1950 6500
 Text Notes 3050 6550 0    50   ~ 0
@@ -864,15 +847,10 @@ Text Label 1450 6500 2    50   ~ 0
 BatOk
 Wire Wire Line
 	2550 6500 2750 6500
-Text Label 7500 5400 2    50   ~ 0
+Text Label 7800 5400 2    50   ~ 0
 ~BatOk
-Text Label 8000 5200 0    50   ~ 0
+Text Label 8200 5400 0    50   ~ 0
 GPIO16
-Connection ~ 7300 6000
-Wire Wire Line
-	7300 6000 8000 6000
-Wire Wire Line
-	6450 6000 7300 6000
 Wire Notes Line
 	9450 5000 5150 5000
 Wire Notes Line
@@ -926,26 +904,103 @@ Wire Wire Line
 Connection ~ 1850 6600
 Wire Wire Line
 	1850 6600 1850 6700
+NoConn ~ 2550 6600
 $Comp
-L Jumper:SolderJumper_2_Bridged JP1
-U 1 1 5F9ABDE0
-P 8550 5400
-F 0 "JP1" H 8550 5550 50  0000 C CNN
-F 1 "SolderJumper_2_Bridged" H 8850 5250 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 8550 5400 50  0001 C CNN
-F 3 "~" H 8550 5400 50  0001 C CNN
-	1    8550 5400
+L Connector:Conn_01x04_Male J6
+U 1 1 5F948FB5
+P 4300 3700
+F 0 "J6" H 4400 4050 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 4400 3950 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 4300 3700 50  0001 C CNN
+F 3 "~" H 4300 3700 50  0001 C CNN
+	1    4300 3700
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+5V #PWR05
+U 1 1 5F949842
+P 4650 3600
+F 0 "#PWR05" H 4650 3450 50  0001 C CNN
+F 1 "+5V" V 4650 3800 50  0000 C CNN
+F 2 "" H 4650 3600 50  0000 C CNN
+F 3 "" H 4650 3600 50  0000 C CNN
+	1    4650 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR07
+U 1 1 5F94A6C5
+P 4650 3800
+F 0 "#PWR07" H 4650 3650 50  0001 C CNN
+F 1 "+3.3V" V 4650 4050 50  0000 C CNN
+F 2 "" H 4650 3800 50  0000 C CNN
+F 3 "" H 4650 3800 50  0000 C CNN
+	1    4650 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5F94AF46
+P 4650 3700
+F 0 "#PWR06" H 4650 3450 50  0001 C CNN
+F 1 "GND" V 4650 3500 50  0000 C CNN
+F 2 "" H 4650 3700 50  0000 C CNN
+F 3 "" H 4650 3700 50  0000 C CNN
+	1    4650 3700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5F94B7FD
+P 4650 3900
+F 0 "#PWR08" H 4650 3650 50  0001 C CNN
+F 1 "GND" V 4650 3700 50  0000 C CNN
+F 2 "" H 4650 3900 50  0000 C CNN
+F 3 "" H 4650 3900 50  0000 C CNN
+	1    4650 3900
+	0    -1   -1   0   
+$EndComp
 Wire Wire Line
-	8000 5400 8400 5400
-Text Label 8700 5400 0    50   ~ 0
-GPIO6
+	4500 3600 4650 3600
 Wire Wire Line
-	7500 5400 7700 5400
+	4500 3700 4650 3700
 Wire Wire Line
-	7700 5400 7700 5200
+	4500 3800 4650 3800
 Wire Wire Line
-	7700 5200 8000 5200
-NoConn ~ 2550 6600
+	4500 3900 4650 3900
+$Comp
+L power:GND #PWR04
+U 1 1 5F8C6F0E
+P 6450 5800
+F 0 "#PWR04" H 6450 5550 50  0001 C CNN
+F 1 "GND" V 6455 5672 50  0000 R CNN
+F 2 "" H 6450 5800 50  0001 C CNN
+F 3 "" H 6450 5800 50  0001 C CNN
+	1    6450 5800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6450 5700 6450 5800
+Wire Wire Line
+	6150 5400 6050 5400
+Wire Wire Line
+	6050 5400 6050 6200
+Wire Wire Line
+	6050 6200 6200 6200
+Connection ~ 6050 5400
+Wire Wire Line
+	6050 5400 5950 5400
+Wire Wire Line
+	6800 6200 7000 6200
+Wire Wire Line
+	7000 6200 7000 5400
+Wire Wire Line
+	6750 5400 7000 5400
+Connection ~ 7000 5400
+Wire Wire Line
+	7000 5400 7150 5400
+Text Label 7150 5400 0    50   ~ 0
+BatOk
+Wire Wire Line
+	7800 5400 8200 5400
 $EndSCHEMATC
