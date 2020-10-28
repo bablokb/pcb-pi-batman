@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Pi Battery Management pHat"
-Date "2020-10-24"
-Rev "6"
+Date "2020-10-28"
+Rev "7"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pcb-pi-batman"
 Comment2 ""
@@ -1003,4 +1003,46 @@ Text Label 7150 5400 0    50   ~ 0
 BatOk
 Wire Wire Line
 	7800 5400 8200 5400
+Wire Notes Line
+	4050 3250 5050 3250
+Wire Notes Line
+	5050 3250 5050 4050
+Wire Notes Line
+	5050 4050 4050 4050
+Wire Notes Line
+	4050 4050 4050 3250
+$Comp
+L Switch:SW_Push SW2
+U 1 1 5F9A4237
+P 4600 4550
+F 0 "SW2" H 4600 4850 50  0000 C CNN
+F 1 "SW_Push" H 4600 4750 50  0000 C CNN
+F 2 "user:SW_PUSH_SLIM_1x4" H 4600 4750 50  0001 C CNN
+F 3 "~" H 4600 4750 50  0001 C CNN
+	1    4600 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5F9A4B7E
+P 4400 4550
+F 0 "#PWR09" H 4400 4300 50  0001 C CNN
+F 1 "GND" V 4405 4422 50  0000 R CNN
+F 2 "" H 4400 4550 50  0001 C CNN
+F 3 "" H 4400 4550 50  0001 C CNN
+	1    4400 4550
+	1    0    0    -1  
+$EndComp
+Text Label 4800 4550 0    50   ~ 0
+GPIO6
+Wire Notes Line
+	4050 4200 5050 4200
+Wire Notes Line
+	5050 4200 5050 5000
+Wire Notes Line
+	5050 5000 4050 5000
+Wire Notes Line
+	4050 5000 4050 4200
+Text Notes 4100 4950 0    50   ~ 0
+gpio-shutdown
 $EndSCHEMATC
