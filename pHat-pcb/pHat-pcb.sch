@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Pi Battery Management pHat"
-Date "2020-10-28"
-Rev "7"
+Date "2020-10-30"
+Rev "8"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pcb-pi-batman"
 Comment2 ""
@@ -427,7 +427,7 @@ Wire Wire Line
 	6950 1450 6950 950 
 Wire Wire Line
 	6950 950  7550 950 
-Text Label 6800 4550 0    50   ~ 0
+Text Label 7500 4400 2    50   ~ 0
 En
 $Comp
 L Connector:Conn_01x03_Male J8
@@ -491,24 +491,16 @@ F 3 "~" H 1300 6100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x03_Female J4
+L Connector:Conn_01x04_Female J4
 U 1 1 5F762AD7
 P 6250 4150
 F 0 "J4" H 6142 3725 50  0000 C CNN
 F 1 "Conn_Bat" H 6142 3816 50  0000 C CNN
-F 2 "TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-3_1x03_P2.54mm_Horizontal" H 6250 4150 50  0001 C CNN
+F 2 "TerminalBlock_TE-Connectivity:TerminalBlock_TE_282834-4_1x04_P2.54mm_Horizontal" H 6250 4150 50  0001 C CNN
 F 3 "~" H 6250 4150 50  0001 C CNN
 	1    6250 4150
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	6450 4050 6700 4050
-Wire Wire Line
-	6700 4050 6700 3950
-Wire Wire Line
-	6750 4150 6750 4100
-Wire Wire Line
-	6450 4150 6750 4150
 Text Label 7500 4250 2    50   ~ 0
 +5V
 Text Label 6300 1150 2    50   ~ 0
@@ -609,8 +601,6 @@ Wire Notes Line
 	4000 5400 650  5400
 Wire Notes Line
 	650  5400 650  3400
-Wire Wire Line
-	6800 4550 6800 4400
 Text Label 8600 1350 0    50   ~ 0
 En
 Wire Wire Line
@@ -635,9 +625,6 @@ Wire Wire Line
 	6450 4250 6700 4250
 Wire Wire Line
 	6700 4250 6700 4400
-Wire Wire Line
-	6700 4400 6800 4400
-Connection ~ 6800 4400
 Wire Wire Line
 	8800 1100 8650 1100
 Wire Wire Line
@@ -664,10 +651,6 @@ Wire Wire Line
 	7350 1450 7900 1450
 Text Label 2650 4700 0    50   ~ 0
 1~PRE
-Wire Wire Line
-	6750 4100 7000 4100
-Wire Wire Line
-	6800 4400 7500 4400
 Wire Wire Line
 	7000 3750 7000 4100
 Connection ~ 7000 4100
@@ -726,15 +709,8 @@ Text Notes 6050 2000 0    50   ~ 0
 on: High -> Low
 Text Notes 2800 6200 0    50   ~ 0
 on: High -> Low
-Text Label 7250 3900 0    50   ~ 0
+Text Label 7500 3950 2    50   ~ 0
 Vin
-Wire Wire Line
-	7250 3900 7250 3950
-Connection ~ 7250 3950
-Wire Wire Line
-	7250 3950 7500 3950
-Wire Wire Line
-	6700 3950 7250 3950
 Text Label 1400 4000 2    50   ~ 0
 GPIO2(SDA1)
 Text Label 1500 3850 2    50   ~ 0
@@ -802,17 +778,6 @@ Wire Wire Line
 Connection ~ 1950 4200
 Wire Wire Line
 	1950 4200 2050 4200
-$Comp
-L User:KA75330 U5
-U 1 1 5F8B41F9
-P 6450 5400
-F 0 "U5" H 6450 5642 50  0000 C CNN
-F 1 "KA75330" H 6450 5551 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 6450 5625 50  0001 C CIN
-F 3 "" H 6450 5350 50  0001 C CNN
-	1    6450 5400
-	1    0    0    -1  
-$EndComp
 Text Label 5950 5400 2    50   ~ 0
 Vin
 $Comp
@@ -1045,4 +1010,31 @@ Wire Notes Line
 	4050 5000 4050 4200
 Text Notes 4100 4950 0    50   ~ 0
 gpio-shutdown
+Wire Wire Line
+	6700 4100 6700 4050
+Wire Wire Line
+	6700 4050 6450 4050
+Wire Wire Line
+	6700 4100 7000 4100
+Wire Wire Line
+	7500 4250 6800 4250
+Wire Wire Line
+	6800 4250 6800 4150
+Wire Wire Line
+	6800 4150 6450 4150
+Wire Wire Line
+	6450 3950 7500 3950
+Wire Wire Line
+	6700 4400 7500 4400
+$Comp
+L User:KA75330 U5
+U 1 1 5F8B41F9
+P 6450 5400
+F 0 "U5" H 6450 5642 50  0000 C CNN
+F 1 "KA75330" H 6450 5551 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 6450 5625 50  0001 C CIN
+F 3 "" H 6450 5350 50  0001 C CNN
+	1    6450 5400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
