@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Pi Battery Management pHat"
-Date "2020-10-30"
-Rev "8"
+Date "2020-12-15"
+Rev "9"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pcb-pi-batman"
 Comment2 ""
@@ -373,10 +373,6 @@ F 12 "Active" H 8500 2650 60  0001 L CNN "Status"
 $EndComp
 NoConn ~ 8600 1550
 NoConn ~ 8600 1650
-NoConn ~ 7900 1550
-NoConn ~ 7900 1650
-NoConn ~ 7900 1750
-NoConn ~ 7900 1850
 Wire Wire Line
 	7550 950  7550 1250
 Wire Wire Line
@@ -411,7 +407,7 @@ F 3 "~" H 8800 1100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7550 950  8400 950 
+	7550 950  7750 950 
 $Comp
 L power:PWR_FLAG #FLG02
 U 1 1 5F756DF3
@@ -1037,4 +1033,28 @@ F 3 "" H 6450 5350 50  0001 C CNN
 	1    6450 5400
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	7900 1650 7750 1650
+Wire Wire Line
+	7750 1650 7750 950 
+Connection ~ 7750 950 
+Wire Wire Line
+	7750 950  8400 950 
+Wire Wire Line
+	7900 1850 7750 1850
+Wire Wire Line
+	7750 1850 7750 1650
+Connection ~ 7750 1650
+Wire Wire Line
+	7900 1550 7800 1550
+Wire Wire Line
+	7800 1550 7800 1750
+Wire Wire Line
+	7800 2050 8400 2050
+Connection ~ 8400 2050
+Wire Wire Line
+	7900 1750 7800 1750
+Connection ~ 7800 1750
+Wire Wire Line
+	7800 1750 7800 2050
 $EndSCHEMATC

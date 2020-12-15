@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Pi Battery Management"
-Date "2020-10-12"
-Rev "3"
+Date "2020-12-15"
+Rev "4"
 Comp "Bernhard Bablok"
 Comment1 "https://github.com/bablokb/pcb-pi-batman"
 Comment2 ""
@@ -68,10 +68,6 @@ F 12 "Active" H 5250 5100 60  0001 L CNN "Status"
 $EndComp
 NoConn ~ 5350 4000
 NoConn ~ 5350 4100
-NoConn ~ 4650 4000
-NoConn ~ 4650 4100
-NoConn ~ 4650 4200
-NoConn ~ 4650 4300
 Wire Wire Line
 	4300 3400 4300 3700
 Wire Wire Line
@@ -112,7 +108,7 @@ F 3 "~" H 6800 3550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4300 3400 5150 3400
+	4300 3400 4500 3400
 $Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 5F66B4BA
@@ -167,7 +163,7 @@ $EndComp
 Text Label 2750 3750 2    50   ~ 0
 +5V
 Wire Wire Line
-	2750 5050 5150 5050
+	2750 5050 4600 5050
 Text Label 2750 3850 2    50   ~ 0
 GPIOxx
 Text Label 6600 4050 0    50   ~ 0
@@ -231,4 +227,28 @@ Text Notes 3200 4500 0    39   ~ 0
 on: High -> Low
 Text Label 3900 4650 0    50   ~ 0
 Vin
+Wire Wire Line
+	4650 4100 4500 4100
+Wire Wire Line
+	4500 4100 4500 3400
+Connection ~ 4500 3400
+Wire Wire Line
+	4500 3400 5150 3400
+Wire Wire Line
+	4650 4300 4500 4300
+Wire Wire Line
+	4500 4300 4500 4100
+Connection ~ 4500 4100
+Wire Wire Line
+	4650 4200 4600 4200
+Wire Wire Line
+	4600 4200 4600 5050
+Connection ~ 4600 5050
+Wire Wire Line
+	4600 5050 5150 5050
+Wire Wire Line
+	4650 4000 4600 4000
+Wire Wire Line
+	4600 4000 4600 4200
+Connection ~ 4600 4200
 $EndSCHEMATC
