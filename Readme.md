@@ -78,7 +78,7 @@ pHat-Pcb
 
 The format of the pcb is a zero-sized hat without beeing a formal pHat:
 
-![](pHat-pcb-3d.png)
+![](pHat-pcb.jpg)
 
 ![](pHat-pcb-layout.png)
 
@@ -91,7 +91,6 @@ The following components are optional:
   - DS3131 RTC
   - KA75330 + LED + resistor
   - all connectors
-
 
 
 Pi Configuration Min-Pcb
@@ -113,7 +112,7 @@ Pi Configuration pHat-Pcb
 This pcb has multiple connections to the Pi. Add following lines to
 your `/boot/config.txt`:
 
-    dtoverlay=i2c-rtc,ds3231
+    dtoverlay=i2c-rtc,ds3231,wakup-source
     dtoverlay=gpio-shutdown,gpio_pin=6
     dtoverlay=gpio-poweroff,gpiopin=26
     dtoverlay=gpio-key,gpio=16,active_low=0,gpio_pull=off,label=lbo,keycode=xx
